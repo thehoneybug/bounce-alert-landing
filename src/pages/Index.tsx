@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Check, Shield, AlertTriangle, Clock, Target, Zap, Users, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -35,7 +34,7 @@ const Index = () => {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-2">
               <Shield className="h-8 w-8 text-blue-600" />
-              <span className="text-2xl font-bold text-gray-900">CampaignGuard</span>
+              <span className="text-2xl font-bold text-gray-900">Buztler</span>
             </div>
             <Button onClick={() => scrollToSection('demo')} className="bg-blue-600 hover:bg-blue-700">
               Book Free Demo
@@ -194,7 +193,7 @@ const Index = () => {
             ))}
           </div>
           <blockquote className="text-2xl md:text-3xl text-white mb-8 leading-relaxed">
-            "CampaignGuard caught a 6.2% bounce rate spike on our biggest client's campaign at 2 AM. 
+            "Buztler caught a 6.2% bounce rate spike on our biggest client's campaign at 2 AM. 
             Without this alert, we would have woken up to a dead domain and a $8,000 rebuild cost. 
             This system has already paid for itself 20x over."
           </blockquote>
@@ -356,7 +355,7 @@ const Index = () => {
               Book Your Free 15-Minute Demo
             </h2>
             <p className="text-xl text-gray-600">
-              See exactly how CampaignGuard prevents domain disasters
+              See exactly how Buztler prevents domain disasters
             </p>
           </div>
           <Card>
@@ -528,11 +527,11 @@ const Index = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-2 mb-4 md:mb-0">
               <Shield className="h-8 w-8 text-blue-400" />
-              <span className="text-2xl font-bold">CampaignGuard</span>
+              <span className="text-2xl font-bold">Buztler</span>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>24/7 Support: support@campaignguard.com</p>
-              <p className="text-sm mt-1">© 2024 CampaignGuard. All rights reserved.</p>
+              <p>24/7 Support: support@buztler.com</p>
+              <p className="text-sm mt-1">© 2024 Buztler. All rights reserved.</p>
             </div>
           </div>
         </div>
