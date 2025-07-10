@@ -20,7 +20,7 @@ const Index = () => {
     e.preventDefault();
     // Handle form submission
     console.log('Service inquiry:', formData);
-    alert('Service inquiry submitted! I\'ll contact you within 2 hours to discuss your monitoring needs.');
+    alert('Service inquiry submitted! Our team will contact you within 2 hours to discuss your monitoring needs.');
   };
 
   const scrollToSection = (id: string) => {
@@ -57,8 +57,8 @@ const Index = () => {
               <span className="text-blue-600">Monitoring Service</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Get comprehensive daily bounce rate reports delivered to your inbox. No setup required - I handle everything for you. 
-              Save thousands in deliverability issues with professional-grade monitoring.
+              Our team delivers comprehensive daily bounce rate reports directly to your inbox. No setup required - we handle everything for you. 
+              Save thousands in deliverability issues with enterprise-grade monitoring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
@@ -74,7 +74,7 @@ const Index = () => {
                 className="text-lg px-8 py-4"
                 onClick={() => scrollToSection('how-it-works')}
               >
-                How My Service Works
+                How Our Service Works
               </Button>
             </div>
             <div className="bg-white rounded-lg shadow-xl p-6 max-w-2xl mx-auto">
@@ -132,7 +132,7 @@ const Index = () => {
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">No Technical Knowledge</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">No Professional Oversight</h3>
                 <p className="text-gray-600">
                   Setting up monitoring systems requires expertise you don't have. Trends develop slowly and are easy to miss.
                 </p>
@@ -147,10 +147,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              How My Professional Service Works
+              How Our Professional Service Works
             </h2>
             <p className="text-xl text-gray-600">
-              Completely hands-off solution - I handle everything
+              Completely hands-off solution - our team handles everything
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -160,23 +160,23 @@ const Index = () => {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-4">You Provide Access</h3>
               <p className="text-gray-600">
-                Simply provide access to your email platform. I handle all the technical setup and configuration.
+                Simply provide access to your email platform. Our team handles all the technical setup and configuration.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">I Set Up Your Monitoring</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Our Team Configures Your System</h3>
               <p className="text-gray-600">
-                I create your custom monitoring system with professional-grade tracking and analysis tools.
+                Our dedicated specialists create your custom monitoring system with enterprise-grade tracking and analysis.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">3</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Receive Daily Reports</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Receive Automated Daily Reports</h3>
               <p className="text-gray-600">
                 Get comprehensive daily reports with professional insights and recommendations delivered automatically.
               </p>
@@ -190,20 +190,20 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What You Get with My Service
+              What You Get with Our Professional Service
             </h2>
             <p className="text-xl text-gray-600">
-              Complete professional monitoring solution
+              Complete enterprise-grade monitoring solution managed by our expert team
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: TrendingUp, title: "Daily Detailed Reports", desc: "Comprehensive bounce rate analysis delivered to your inbox every morning" },
-              { icon: Target, title: "Trend Analysis", desc: "Professional insights into patterns and early warning signs" },
-              { icon: AlertTriangle, title: "Alert Notifications", desc: "Immediate alerts when bounce rates exceed safe thresholds" },
-              { icon: Shield, title: "Professional Insights", desc: "Expert recommendations and actionable next steps" },
-              { icon: Users, title: "Direct Support", desc: "Personal support from an email deliverability expert" },
-              { icon: Zap, title: "Hands-Off Solution", desc: "No technical knowledge needed - I handle everything" }
+              { icon: TrendingUp, title: "Daily Detailed Reports", desc: "Comprehensive bounce rate analysis delivered to your inbox every morning by our team" },
+              { icon: Target, title: "Professional Trend Analysis", desc: "Our expertise in identifying patterns and early warning signs that others miss" },
+              { icon: AlertTriangle, title: "Alert Notifications", desc: "Immediate alerts when bounce rates exceed safe thresholds, managed by our specialists" },
+              { icon: Shield, title: "Expert Insights", desc: "Professional recommendations and actionable next steps from our dedicated team" },
+              { icon: Users, title: "Dedicated Support Team", desc: "Direct access to our email deliverability specialists whenever you need help" },
+              { icon: Zap, title: "Fully Managed Solution", desc: "No technical knowledge needed - our team handles everything so you can focus on your business" }
             ].map((feature, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
@@ -222,16 +222,16 @@ const Index = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Complete Monitoring Service
+              Complete Professional Monitoring Service
             </h2>
             <p className="text-xl text-gray-600">
-              Professional-grade monitoring with guaranteed results
+              Enterprise-grade monitoring with dedicated team support
             </p>
           </div>
           <Card className="border-blue-500 relative">
             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
               <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-medium">
-                Complete Solution
+                Complete Enterprise Solution
               </span>
             </div>
             <CardContent className="p-12 text-center">
@@ -242,12 +242,12 @@ const Index = () => {
               <div className="text-sm text-green-600 font-medium mb-8">Saves $8,000+ on first prevention</div>
               <ul className="text-left space-y-4 mb-8 max-w-md mx-auto">
                 {[
-                  "Complete system setup and configuration",
+                  "Complete system setup by our team",
                   "Daily detailed bounce rate reports",
                   "Professional trend analysis",
                   "Immediate alert notifications",
                   "Expert insights and recommendations",
-                  "Direct support from deliverability expert",
+                  "Dedicated support team access",
                   "30-day historical data analysis",
                   "Guaranteed response within 2 hours"
                 ].map((feature, i) => (
@@ -258,10 +258,10 @@ const Index = () => {
                 ))}
               </ul>
               <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4 w-full">
-                Start My Service
+                Start Service Today
               </Button>
               <p className="text-sm text-gray-500 mt-4">
-                30-day money-back guarantee • Setup completed within 24 hours
+                30-day money-back guarantee • Setup completed within 24 hours by our team
               </p>
             </CardContent>
           </Card>
@@ -277,8 +277,8 @@ const Index = () => {
             ))}
           </div>
           <blockquote className="text-2xl md:text-3xl text-white mb-8 leading-relaxed">
-            "Having professional monitoring gave me complete peace of mind. The daily reports caught a gradual 
-            bounce rate increase before it became critical. I sleep better knowing an expert is watching my campaigns 24/7."
+            "The team at Buztler caught issues we never would have spotted ourselves. Their professional monitoring 
+            gave us complete peace of mind, and the daily reports helped us prevent what could have been a $15K disaster."
           </blockquote>
           <div className="text-white">
             <div className="font-semibold text-lg">Sarah M.</div>
@@ -291,11 +291,11 @@ const Index = () => {
             </div>
             <div>
               <div className="text-4xl font-bold text-yellow-400">24/7</div>
-              <div className="text-blue-200">Professional Monitoring</div>
+              <div className="text-blue-200">Professional Team Monitoring</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-yellow-400">$8,000</div>
-              <div className="text-blue-200">Disaster Costs Avoided</div>
+              <div className="text-4xl font-bold text-yellow-400">$15,000</div>
+              <div className="text-blue-200">Disaster Costs Prevented</div>
             </div>
           </div>
         </div>
@@ -309,7 +309,7 @@ const Index = () => {
               Get Your Professional Monitoring Service
             </h2>
             <p className="text-xl text-gray-600">
-              I'll contact you within 2 hours to discuss your monitoring needs
+              Our team will contact you within 2 hours to discuss your monitoring needs
             </p>
           </div>
           <Card>
@@ -379,7 +379,7 @@ const Index = () => {
                   Get Professional Monitoring
                 </Button>
                 <p className="text-sm text-gray-500 text-center">
-                  I'll contact you within 2 hours to discuss your monitoring needs
+                  Our team will contact you within 2 hours to discuss your monitoring needs
                 </p>
               </form>
             </CardContent>
@@ -398,24 +398,24 @@ const Index = () => {
           <div className="space-y-4">
             {[
               {
-                q: "What makes your monitoring service different?",
-                a: "I provide professional-grade monitoring with personal expertise. Unlike automated tools, you get human analysis, insights, and recommendations from an email deliverability expert who understands the nuances of bounce rate patterns."
+                q: "What makes your team's monitoring service different?",
+                a: "Our team provides enterprise-grade monitoring with human expertise. Unlike automated tools, you get professional analysis, insights, and recommendations from our dedicated email deliverability specialists who understand the nuances of bounce rate patterns."
               },
               {
-                q: "How quickly will I see results?",
-                a: "You'll receive your first comprehensive report within 24 hours of setup. Most clients see improved confidence and early problem detection within the first week of monitoring."
+                q: "How quickly will our team deliver results?",
+                a: "You'll receive your first comprehensive report within 24 hours of our team completing the setup. Most clients see improved confidence and early problem detection within the first week of our professional monitoring service."
               },
               {
                 q: "Do I need any technical knowledge?",
-                a: "Absolutely not. This is a completely hands-off solution. I handle all technical aspects while you focus on your business. You simply receive professional reports and insights."
+                a: "Absolutely not. This is a completely hands-off solution. Our team handles all technical aspects while you focus on your business. You simply receive professional reports and insights from our specialists."
               },
               {
-                q: "What if I'm not satisfied with the service?",
-                a: "I offer a 30-day money-back guarantee. If you're not completely satisfied with the professional monitoring service, I'll refund your investment in full."
+                q: "What if I'm not satisfied with your team's service?",
+                a: "We offer a 30-day money-back guarantee. If you're not completely satisfied with our professional monitoring service and team support, we'll refund your investment in full."
               },
               {
-                q: "Can you monitor multiple email platforms?",
-                a: "Yes, I can set up monitoring for most major email platforms and provide consolidated reporting across all your campaigns and clients."
+                q: "Can your team monitor multiple email platforms?",
+                a: "Yes, our team can set up monitoring for most major email platforms and provide consolidated reporting across all your campaigns and clients through our enterprise solution."
               }
             ].map((faq, index) => (
               <Card key={index}>
@@ -451,7 +451,7 @@ const Index = () => {
           </h2>
           <p className="text-xl text-red-100 mb-8">
             Every day without professional monitoring is another day risking $10,000 domain losses. 
-            Get expert monitoring and peace of mind today.
+            Get our expert team monitoring and complete peace of mind today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -467,11 +467,11 @@ const Index = () => {
               className="border-white text-white hover:bg-white hover:text-red-600 text-lg px-8 py-4"
               onClick={() => scrollToSection('inquiry')}
             >
-              Start My Service
+              Start Service Today
             </Button>
           </div>
           <p className="text-red-100 mt-4 text-sm">
-            30-day money-back guarantee • Setup completed within 24 hours
+            30-day money-back guarantee • Setup completed within 24 hours by our team
           </p>
         </div>
       </section>
@@ -485,7 +485,7 @@ const Index = () => {
               <span className="text-2xl font-bold">Buztler</span>
             </div>
             <div className="text-gray-400 text-center md:text-right">
-              <p>Professional Support: support@buztler.com</p>
+              <p>Professional Team Support: support@buztler.com</p>
               <p className="text-sm mt-1">© 2024 Buztler. All rights reserved.</p>
             </div>
           </div>
