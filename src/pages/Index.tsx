@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Check, Shield, AlertTriangle, Clock, Target, Zap, Users, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -52,12 +53,12 @@ const Index = () => {
               Domain Death Alert: Agencies Losing $10K+ Monthly
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Stop Losing <span className="text-red-600">$10,000 Domains</span><br />
-              to High Bounce Rates
+              Monitor Your Email Bounce Rates<br />
+              with <span className="text-blue-600">Daily Intelligence Reports</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-              Get instant alerts when your SmartLead campaigns hit dangerous bounce rate thresholds. 
-              Protect your clients' domains before it's too late.
+              Get comprehensive daily reports on your email bounce rates to identify trends, 
+              troubleshoot issues, and maintain sender reputation before problems become critical.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button 
@@ -65,7 +66,7 @@ const Index = () => {
                 className="bg-blue-600 hover:bg-blue-700 text-lg px-8 py-4"
                 onClick={() => scrollToSection('demo')}
               >
-                Book Free 15-Minute Demo
+                Start Daily Monitoring
               </Button>
               <Button 
                 size="lg" 
@@ -77,15 +78,15 @@ const Index = () => {
               </Button>
             </div>
             <div className="bg-white rounded-lg shadow-xl p-6 max-w-2xl mx-auto">
-              <div className="flex items-center justify-between bg-red-50 border border-red-200 rounded-lg p-4">
+              <div className="flex items-center justify-between bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <div className="flex items-center">
-                  <AlertTriangle className="h-6 w-6 text-red-600 mr-3" />
+                  <TrendingUp className="h-6 w-6 text-blue-600 mr-3" />
                   <div>
-                    <div className="text-sm font-medium text-red-800">BOUNCE RATE ALERT</div>
-                    <div className="text-xs text-red-600">Campaign: ClientCorp-Q4 | Rate: 6.2%</div>
+                    <div className="text-sm font-medium text-blue-800">DAILY BOUNCE REPORT</div>
+                    <div className="text-xs text-blue-600">Campaign: ClientCorp-Q4 | Trend: +0.8% over 3 days</div>
                   </div>
                 </div>
-                <div className="text-red-600 font-bold text-lg">DANGER</div>
+                <div className="text-blue-600 font-bold text-lg">TRENDING</div>
               </div>
             </div>
           </div>
@@ -131,9 +132,9 @@ const Index = () => {
                 <div className="bg-red-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="h-8 w-8 text-red-600" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Manual Monitoring Chaos</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Blind Spot Monitoring</h3>
                 <p className="text-gray-600">
-                  Checking 50+ campaigns manually is impossible. By the time you notice, it's too late.
+                  Checking 50+ campaigns manually is impossible. Trends develop slowly and are easy to miss.
                 </p>
               </CardContent>
             </Card>
@@ -146,10 +147,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              24/7 Protection in 3 Simple Steps
+              Daily Intelligence in 3 Simple Steps
             </h2>
             <p className="text-xl text-gray-600">
-              Set it once, protect forever
+              Set it once, monitor forever
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -166,18 +167,18 @@ const Index = () => {
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">2</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Set Thresholds</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Set Monitoring Preferences</h3>
               <p className="text-gray-600">
-                Configure bounce rate alerts (default: 5% warning, 7% danger). Custom settings per campaign.
+                Configure your reporting schedule and warning thresholds. Custom settings per campaign.
               </p>
             </div>
             <div className="text-center">
               <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold text-blue-600">3</span>
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Get Instant Alerts</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">Receive Daily Reports</h3>
               <p className="text-gray-600">
-                Email, Slack, or SMS alerts the moment danger hits. Includes actionable recommendations.
+                Comprehensive email reports with trends, insights, and actionable recommendations delivered daily.
               </p>
             </div>
           </div>
@@ -193,9 +194,9 @@ const Index = () => {
             ))}
           </div>
           <blockquote className="text-2xl md:text-3xl text-white mb-8 leading-relaxed">
-            "Buztler caught a 6.2% bounce rate spike on our biggest client's campaign at 2 AM. 
-            Without this alert, we would have woken up to a dead domain and a $8,000 rebuild cost. 
-            This system has already paid for itself 20x over."
+            "Our daily Bounce Alert reports helped us identify a gradual bounce rate increase over 5 days. 
+            We caught the domain reputation issue before it became critical, saving us thousands in 
+            deliverability recovery costs."
           </blockquote>
           <div className="text-white">
             <div className="font-semibold text-lg">Marketing Director</div>
@@ -203,16 +204,16 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8 mt-12 text-center">
             <div>
+              <div className="text-4xl font-bold text-yellow-400">5 Days</div>
+              <div className="text-blue-200">Early Detection Window</div>
+            </div>
+            <div>
+              <div className="text-4xl font-bold text-yellow-400">Daily</div>
+              <div className="text-blue-200">Intelligence Reports</div>
+            </div>
+            <div>
               <div className="text-4xl font-bold text-yellow-400">$8,000</div>
-              <div className="text-blue-200">Domain Disaster Prevented</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-yellow-400">2:00 AM</div>
-              <div className="text-blue-200">Alert Received</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-yellow-400">15 min</div>
-              <div className="text-blue-200">Response Time</div>
+              <div className="text-blue-200">Recovery Costs Saved</div>
             </div>
           </div>
         </div>
@@ -223,17 +224,17 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Everything You Need to Protect Your Domains
+              Everything You Need for Intelligent Monitoring
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: Shield, title: "SmartLead Integration", desc: "Direct API connection with real-time sync" },
-              { icon: Zap, title: "Instant Alerts", desc: "Email, Slack, SMS notifications in under 60 seconds" },
-              { icon: TrendingUp, title: "7-Day Rolling Averages", desc: "Smart analytics prevent false alarms" },
-              { icon: Target, title: "Custom Thresholds", desc: "Set different limits per campaign or client" },
-              { icon: Clock, title: "24/7 Monitoring", desc: "Never miss a spike, even at 3 AM" },
-              { icon: Users, title: "Team Collaboration", desc: "Multiple users, role-based permissions" }
+              { icon: Shield, title: "SmartLead Integration", desc: "Direct API connection with comprehensive data sync" },
+              { icon: TrendingUp, title: "Daily Intelligence Reports", desc: "Detailed email reports with trends and insights" },
+              { icon: Zap, title: "Trend Analysis", desc: "7-day rolling averages and pattern recognition" },
+              { icon: Target, title: "Custom Thresholds", desc: "Set different monitoring levels per campaign or client" },
+              { icon: Clock, title: "24/7 Data Collection", desc: "Continuous monitoring with daily summary delivery" },
+              { icon: Users, title: "Team Collaboration", desc: "Multiple users, role-based permissions and shared reports" }
             ].map((feature, index) => (
               <Card key={index}>
                 <CardContent className="p-6">
@@ -252,7 +253,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Choose Your Protection Level
+              Choose Your Monitoring Level
             </h2>
             <p className="text-xl text-gray-600">
               30-day money-back guarantee • ROI: 4,060% average return
@@ -266,10 +267,10 @@ const Index = () => {
                 <div className="text-gray-600 mb-6">per SmartLead account/month</div>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "Basic bounce rate monitoring",
-                    "Email alerts",
+                    "Daily bounce rate reports",
+                    "Email delivery",
                     "Standard thresholds",
-                    "7-day history",
+                    "7-day trend analysis",
                     "Email support"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center">
@@ -298,11 +299,11 @@ const Index = () => {
                 <ul className="space-y-3 mb-8">
                   {[
                     "Everything in Starter",
-                    "Slack & SMS alerts",
-                    "Real-time dashboard",
-                    "Trend analysis",
-                    "Custom thresholds",
-                    "30-day history",
+                    "Comprehensive daily dashboards",
+                    "Advanced trend analysis",
+                    "Custom reporting schedules",
+                    "Multi-channel delivery",
+                    "30-day historical data",
                     "Priority support"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center">
@@ -325,11 +326,11 @@ const Index = () => {
                 <ul className="space-y-3 mb-8">
                   {[
                     "Everything in Professional",
-                    "White-label solution",
+                    "White-label reports",
                     "Custom integrations",
                     "Dedicated support",
-                    "Advanced analytics",
-                    "90-day history",
+                    "Advanced analytics suite",
+                    "90-day historical data",
                     "Custom SLAs"
                   ].map((feature, i) => (
                     <li key={i} className="flex items-center">
@@ -355,7 +356,7 @@ const Index = () => {
               Book Your Free 15-Minute Demo
             </h2>
             <p className="text-xl text-gray-600">
-              See exactly how Buztler prevents domain disasters
+              See exactly how Buztler provides intelligent bounce rate monitoring
             </p>
           </div>
           <Card>
@@ -444,8 +445,8 @@ const Index = () => {
           <div className="space-y-4">
             {[
               {
-                q: "How quickly do I get alerted when bounce rates spike?",
-                a: "Alerts are sent within 60 seconds of detecting threshold breaches. Our system checks bounce rates every 15 minutes during active campaign hours."
+                q: "How detailed are the daily bounce rate reports?",
+                a: "Our comprehensive daily reports include bounce rate trends, campaign comparisons, domain health scores, and actionable recommendations. Each report covers the previous 24-hour period with 7-day trend analysis."
               },
               {
                 q: "What's the ROI if this prevents just one domain disaster?",
@@ -453,15 +454,15 @@ const Index = () => {
               },
               {
                 q: "Do you integrate with other email platforms besides SmartLead?",
-                a: "Currently we specialize in SmartLead integration. Our deep SmartLead expertise allows us to provide the most accurate monitoring and fastest alerts."
+                a: "Currently we specialize in SmartLead integration. Our deep SmartLead expertise allows us to provide the most comprehensive monitoring and detailed reporting."
               },
               {
                 q: "What happens during the free trial?",
-                a: "Full access to all features for 14 days. We'll help you set up monitoring for your existing campaigns and provide training on interpreting alerts."
+                a: "Full access to all features for 14 days. You'll receive daily reports for your existing campaigns and we'll provide training on interpreting the data and trends."
               },
               {
                 q: "Can I monitor campaigns for multiple clients?",
-                a: "Yes! Professional and Enterprise plans support unlimited client campaigns with separate alerting and reporting for each client."
+                a: "Yes! Professional and Enterprise plans support unlimited client campaigns with separate reporting and trend analysis for each client."
               }
             ].map((faq, index) => (
               <Card key={index}>
@@ -497,7 +498,7 @@ const Index = () => {
           </h2>
           <p className="text-xl text-red-100 mb-8">
             Every day without monitoring is another day risking $10,000 domain losses. 
-            Get protected in under 10 minutes.
+            Start receiving daily intelligence reports today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
@@ -512,7 +513,7 @@ const Index = () => {
               variant="outline" 
               className="border-white text-white hover:bg-white hover:text-red-600 text-lg px-8 py-4"
             >
-              Start Free Trial
+              Start Daily Monitoring
             </Button>
           </div>
           <p className="text-red-100 mt-4 text-sm">
