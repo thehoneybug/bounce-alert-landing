@@ -23,6 +23,8 @@ export type Database = {
           email: string
           id: string
           name: string
+          phone_number: string | null
+          webhook_url: string | null
         }
         Insert: {
           campaigns: string
@@ -32,6 +34,8 @@ export type Database = {
           email: string
           id?: string
           name: string
+          phone_number?: string | null
+          webhook_url?: string | null
         }
         Update: {
           campaigns?: string
@@ -41,6 +45,8 @@ export type Database = {
           email?: string
           id?: string
           name?: string
+          phone_number?: string | null
+          webhook_url?: string | null
         }
         Relationships: []
       }

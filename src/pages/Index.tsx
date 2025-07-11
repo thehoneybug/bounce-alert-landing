@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Check, Shield, AlertTriangle, Clock, Target, Zap, Users, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,7 +16,9 @@ const Index = () => {
     email: '',
     company: '',
     campaigns: '',
-    challenges: ''
+    challenges: '',
+    phone_number: '',
+    webhook_url: ''
   });
   
   const { toast } = useToast();
@@ -45,7 +48,9 @@ const Index = () => {
           email: '',
           company: '',
           campaigns: '',
-          challenges: ''
+          challenges: '',
+          phone_number: '',
+          webhook_url: ''
         });
       } else {
         throw new Error(data.error || 'Failed to submit form');
@@ -396,16 +401,28 @@ const Index = () => {
                   </div>
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Monthly Email Volume *
+                      Phone Number
                     </label>
                     <Input
-                      required
+                      type="tel"
                       disabled={isSubmitting}
-                      value={formData.campaigns}
-                      onChange={(e) => setFormData({...formData, campaigns: e.target.value})}
-                      placeholder="e.g., 50,000 emails/month"
+                      value={formData.phone_number}
+                      onChange={(e) => setFormData({...formData, phone_number: e.target.value})}
+                      placeholder="+1 (555) 123-4567"
                     />
                   </div>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Monthly Email Volume *
+                  </label>
+                  <Input
+                    required
+                    disabled={isSubmitting}
+                    value={formData.campaigns}
+                    onChange={(e) => setFormData({...formData, campaigns: e.target.value})}
+                    placeholder="e.g., 50,000 emails/month"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">
@@ -418,6 +435,21 @@ const Index = () => {
                     placeholder="What keeps you up at night about your email campaigns?"
                     rows={3}
                   />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Zapier Webhook URL (Optional)
+                  </label>
+                  <Input
+                    type="url"
+                    disabled={isSubmitting}
+                    value={formData.webhook_url}
+                    onChange={(e) => setFormData({...formData, webhook_url: e.target.value})}
+                    placeholder="https://hooks.zapier.com/hooks/catch/..."
+                  />
+                  <p className="text-sm text-gray-500 mt-1">
+                    Add your Zapier webhook URL to automatically trigger workflows when you submit this form
+                  </p>
                 </div>
                 <Button 
                   type="submit" 
