@@ -1,13 +1,15 @@
-
 import { useState } from 'react';
 import { Check, Shield, AlertTriangle, Clock, Target, Zap, Users, TrendingUp, Star, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 const Index = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -15,12 +17,49 @@ const Index = () => {
     campaigns: '',
     challenges: ''
   });
+  
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Service inquiry:', formData);
-    alert('Service inquiry submitted! Our team will contact you within 2 hours to discuss your monitoring needs.');
+    setIsSubmitting(true);
+
+    try {
+      const { data, error } = await supabase.functions.invoke('submit-form', {
+        body: formData
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      if (data.success) {
+        toast({
+          title: "Service inquiry submitted successfully!",
+          description: "Our team will contact you within 2 hours to discuss your monitoring needs. Please check your email for confirmation.",
+        });
+        
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          campaigns: '',
+          challenges: ''
+        });
+      } else {
+        throw new Error(data.error || 'Failed to submit form');
+      }
+    } catch (error: any) {
+      console.error('Form submission error:', error);
+      toast({
+        title: "Submission failed",
+        description: "There was an error submitting your inquiry. Please try again or contact us directly at support@buztler.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToSection = (id: string) => {
@@ -322,6 +361,7 @@ const Index = () => {
                     </label>
                     <Input
                       required
+                      disabled={isSubmitting}
                       value={formData.name}
                       onChange={(e) => setFormData({...formData, name: e.target.value})}
                       placeholder="Your full name"
@@ -334,6 +374,7 @@ const Index = () => {
                     <Input
                       required
                       type="email"
+                      disabled={isSubmitting}
                       value={formData.email}
                       onChange={(e) => setFormData({...formData, email: e.target.value})}
                       placeholder="your@company.com"
@@ -347,6 +388,7 @@ const Index = () => {
                     </label>
                     <Input
                       required
+                      disabled={isSubmitting}
                       value={formData.company}
                       onChange={(e) => setFormData({...formData, company: e.target.value})}
                       placeholder="Your agency name"
@@ -358,6 +400,7 @@ const Index = () => {
                     </label>
                     <Input
                       required
+                      disabled={isSubmitting}
                       value={formData.campaigns}
                       onChange={(e) => setFormData({...formData, campaigns: e.target.value})}
                       placeholder="e.g., 50,000 emails/month"
@@ -369,14 +412,20 @@ const Index = () => {
                     Biggest Email Deliverability Challenge
                   </label>
                   <Textarea
+                    disabled={isSubmitting}
                     value={formData.challenges}
                     onChange={(e) => setFormData({...formData, challenges: e.target.value})}
                     placeholder="What keeps you up at night about your email campaigns?"
                     rows={3}
                   />
                 </div>
-                <Button type="submit" size="lg" className="w-full bg-blue-600 hover:bg-blue-700">
-                  Get Professional Monitoring
+                <Button 
+                  type="submit" 
+                  size="lg" 
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Get Professional Monitoring'}
                 </Button>
                 <p className="text-sm text-gray-500 text-center">
                   Our team will contact you within 2 hours to discuss your monitoring needs
